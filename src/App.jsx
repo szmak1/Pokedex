@@ -141,7 +141,7 @@ function App() {
                         </div>
                         <div className="text-left mt-4 ">
                 <h5 className="text-bold gap-8 mb-2">Type:</h5>
-                  <div className="flex justify-even gap-4">
+                  <div className="flex justify-even gap-2">
                   {data.types.map(type => (
                     
                     <span
