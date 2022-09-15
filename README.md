@@ -1,5 +1,10 @@
 # Pokedex
+
 Work sample with React
+
+## Demo app:
+
+https://pokedexxdemo.netlify.app
 
 # Getting Started with Create React App
 
