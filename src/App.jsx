@@ -54,7 +54,6 @@ function App() {
     e.preventDefault();
     getPokemonCard();
   }
-
   return (
     <div className="App">
       <Header />
@@ -88,6 +87,8 @@ function App() {
       {pokemonData.map((data) => {
         const imageUrl = data.sprites;
         const themeColor = data.types[0].type.name;
+        const pokeName = data.name.split(' ').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')
+
         return (
           <div key={data.id} style={{position: "absolute",
             top: "50%",
@@ -101,14 +102,14 @@ function App() {
               }}>
               <div className="text-gray-100 ">
                 <h3 className="text-3xl">
-                  {data.name.split(' ').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')}
+                  {pokeName}
                 </h3>
               </div>
               <div className="poke">
            
                 <div className="basic-data">
                   <div className="flex flex-center center justify-center mt-4 mb-4">
-                      <img width="148px" className="pokemon-image flex center" src={imageUrl.other.dream_world.front_default} alt="poke image" />
+                      <img width="148px" className="pokemon-image flex center" src={imageUrl.other.dream_world.front_default} alt={pokeName} />
                   </div>
 
                   <div className="text-gray-100 text-lg flex ">
