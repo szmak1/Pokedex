@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TextField } from '@material-ui/core';
+
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import axios from "axios";
 import './App.css';
@@ -66,7 +67,7 @@ function App() {
           renderInput={(params) => (
             <TextField
               {...params}
-              className='bg-gray-80 border border-gray-300 text-md rounded-lg  block w-full pl-10 p-2.5  dark:bg-gray-100 '
+              className='bg-gray-80 border border-gray-300 text-md   block w-full pl-10 p-2.5  dark:bg-gray-100 '
               required={true}
               label="Search Pokemon"
               margin="normal"
@@ -80,8 +81,16 @@ function App() {
               InputProps={{ ...params.InputProps, type: 'search' }}
               style={{maxWidth: 464}}
             />
+            
+
+
+            
           )}
+      
         />
+        <div className='flex justify-center m-auto' style={{maxWidth: "464px", backgroundColor: "#ed5564"}}>
+        <button className="p-4 text-lg uppercase block w-full pl-10 p-2.5 rounded-bl-md" onClick={handleSearch} style={{backgroundColor: "#ed5564"}}>Search</button>
+        </div>
       </div>
       
       {pokemonData.map((data) => {
@@ -90,14 +99,14 @@ function App() {
         const pokeName = data.name.split(' ').map(s => s.charAt(0).toUpperCase() + s.substring(1)).join(' ')
 
         return (
-          <div key={data.id} style={{position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)"}}>
+          <div key={data.id} className="container mx-auto">
+            <div className="flex flex-wrap justify-center">
+              <div className="w-full p-6 flex flex-col">
+       
             <div
-            className="bg-black/[.3] p-12 rounded-lg"
+            className="bg-black/[.3] p-12 rounded-lg self-center"
               style={{
-                width: "464px",
+                maxWidth: "464px",
                 border: `2px solid #${TYPE_COLORS[themeColor]}`,   
               }}>
               <div className="text-gray-100 ">
@@ -267,6 +276,10 @@ function App() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    
+
         );
       })}
     </div>
