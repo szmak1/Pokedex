@@ -108,7 +108,7 @@ function App() {
            
                 <div className="basic-data">
                   <div className="flex flex-center center justify-center mt-4 mb-4">
-                      <img width="148px" className="pokemon-image flex center" src={imageUrl.other.dream_world.front_default} />
+                      <img width="148px" className="pokemon-image flex center" src={imageUrl.other.dream_world.front_default} alt="poke image" />
                   </div>
 
                   <div className="text-gray-100 text-lg flex ">
