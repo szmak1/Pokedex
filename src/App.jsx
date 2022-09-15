@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div>
+      <div className="p-12">
         <Autocomplete
           freeSolo
           disableClearable
