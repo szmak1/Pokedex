@@ -106,7 +106,7 @@ function App() {
             <div
             className="bg-black/[.3] p-12 rounded-lg self-center"
               style={{
-                maxWidth: "464px",
+                width: 464,
                 border: `2px solid #${TYPE_COLORS[themeColor]}`,   
               }}>
               <div className="text-gray-100 ">
