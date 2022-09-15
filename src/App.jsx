@@ -58,7 +58,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <div className="p-12">
+      <div className="p-4">
         <Autocomplete
           freeSolo
           disableClearable
@@ -101,12 +101,12 @@ function App() {
         return (
           <div key={data.id} className="container mx-auto">
             <div className="flex flex-wrap justify-center">
-              <div className="w-full p-6 flex flex-col">
-       
+              <div className="w-full p-4 flex flex-col">
             <div
-            className="bg-black/[.3] p-12 rounded-lg self-center"
+            className="bg-black/[.3] p-6 md:p-12 rounded-lg self-center"
               style={{
-                width: 464,
+                width: "100%",
+                maxWidth: "464px",
                 border: `2px solid #${TYPE_COLORS[themeColor]}`,   
               }}>
               <div className="text-gray-100 ">
@@ -121,7 +121,7 @@ function App() {
                       <img width="148px" className="pokemon-image flex center" src={imageUrl.other.dream_world.front_default} alt={pokeName} />
                   </div>
 
-                  <div className="text-gray-100 text-lg flex ">
+                  <div className="text-gray-100 text-md md:text-lg flex ">
                   <div className="w-1/2">
                       <div className="">
                             <h5 className="text-left absolute right-4 top-4">ID: #{data.id}</h5>
