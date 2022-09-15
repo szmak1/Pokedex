@@ -6,8 +6,6 @@ import './App.css';
 import Header from './components/Header';
 import { TYPE_COLORS } from './components/colors';
 
-
-
 function App() {
   const [pokemon, setPokemon] = useState("");
   const [pokemonData, setPokemonData] = useState([]);
@@ -128,7 +126,7 @@ function App() {
                             <div className="gap-8 text-left mt-2">Abilities: </div>
                         <div className="uppercase flex justify-start text-left flex-col text-sm ">
                           {data.abilities.map(abilities => (
-                                <span key={abilities}>{abilities.ability.name}&nbsp;</span>
+                                <span key={abilities.id}>{abilities.ability.name}&nbsp;</span>
                           ))}
                         </div>
                         <div className="text-left mt-4 ">

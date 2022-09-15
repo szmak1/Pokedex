@@ -14,7 +14,7 @@ const Header = () => {
           href="/"
         >
           <span className='text-centers text-3xl font-bold'>Pokédex</span>
-          <img src={pokeball} style={{ width: 60 }} />
+          <img src={pokeball} style={{ width: 60 }} alt="pokeball" />
         </a>
       </nav>
     </div>
